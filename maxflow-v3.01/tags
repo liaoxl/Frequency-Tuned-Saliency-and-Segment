@@ -1,0 +1,121 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Block	.\block.h	/^	Block(int size, void (*err_function)(char *) = NULL) { first = last = NULL; block_size = size; error_function = err_function; }$/;"	f	class:Block
+Block	.\block.h	/^template <class Type> class Block$/;"	c
+DBlock	.\block.h	/^	DBlock(int size, void (*err_function)(char *) = NULL) { first = NULL; first_free = NULL; block_size = size; error_function = err_function; }$/;"	f	class:DBlock
+DBlock	.\block.h	/^template <class Type> class DBlock$/;"	c
+DIST	.\graph.h	/^		int			DIST;		\/\/ distance to the terminal$/;"	m	struct:Graph::node
+Delete	.\block.h	/^	void Delete(Type *t)$/;"	f	class:DBlock
+Graph	.\graph.cpp	/^	Graph<captype, tcaptype, flowtype>::Graph(int node_num_max, int edge_num_max, void (*err_function)(char *))$/;"	f	class:Graph
+Graph	.\graph.h	/^template <typename captype, typename tcaptype, typename flowtype> class Graph$/;"	c
+INFINITE_D	.\maxflow.cpp	15;"	d	file:
+NODEPTR_BLOCK_SIZE	.\graph.h	/^	static const int NODEPTR_BLOCK_SIZE = 128;$/;"	m	class:Graph
+New	.\block.h	/^	Type *New()$/;"	f	class:DBlock
+New	.\block.h	/^	Type *New(int num = 1)$/;"	f	class:Block
+ORPHAN	.\maxflow.cpp	12;"	d	file:
+Reset	.\block.h	/^	void Reset()$/;"	f	class:Block
+SINK	.\graph.h	/^		SINK	= 1$/;"	e	enum:Graph::__anon1
+SOURCE	.\graph.h	/^		SOURCE	= 0,$/;"	e	enum:Graph::__anon1
+ScanFirst	.\block.h	/^	Type *ScanFirst()$/;"	f	class:Block
+ScanNext	.\block.h	/^	Type *ScanNext()$/;"	f	class:Block
+TERMINAL	.\maxflow.cpp	11;"	d	file:
+TIME	.\graph.h	/^	int					TIME;								\/\/ monotonically increasing global counter$/;"	m	class:Graph
+TS	.\graph.h	/^		int			TS;			\/\/ timestamp showing when DIST was computed$/;"	m	struct:Graph::node
+__BLOCK_H__	.\block.h	91;"	d
+__GRAPH_H__	.\graph.h	40;"	d
+add_edge	.\graph.h	/^	inline void Graph<captype,tcaptype,flowtype>::add_edge(node_id _i, node_id _j, captype cap, captype rev_cap)$/;"	f	class:Graph
+add_node	.\graph.h	/^	inline typename Graph<captype,tcaptype,flowtype>::node_id Graph<captype,tcaptype,flowtype>::add_node(int num)$/;"	f	class:Graph
+add_to_changed_list	.\maxflow.cpp	/^	inline void Graph<captype,tcaptype,flowtype>::add_to_changed_list(node *i)$/;"	f	class:Graph
+add_tweights	.\graph.h	/^	inline void Graph<captype,tcaptype,flowtype>::add_tweights(node_id i, tcaptype cap_source, tcaptype cap_sink)$/;"	f	class:Graph
+arc	.\graph.h	/^	struct arc$/;"	s	class:Graph
+arc_id	.\graph.h	/^	typedef arc* arc_id;$/;"	t	class:Graph
+arc_last	.\graph.h	/^	arc					*arcs, *arc_last, *arc_max; \/\/ arc_last = arcs+2*edge_num, arc_max = arcs+2*edge_num_max;$/;"	m	class:Graph
+arc_max	.\graph.h	/^	arc					*arcs, *arc_last, *arc_max; \/\/ arc_last = arcs+2*edge_num, arc_max = arcs+2*edge_num_max;$/;"	m	class:Graph
+arcs	.\graph.h	/^	arc					*arcs, *arc_last, *arc_max; \/\/ arc_last = arcs+2*edge_num, arc_max = arcs+2*edge_num_max;$/;"	m	class:Graph
+augment	.\maxflow.cpp	/^	void Graph<captype,tcaptype,flowtype>::augment(arc *middle_arc)$/;"	f	class:Graph
+block	.\block.h	/^	} block;$/;"	t	class:Block	typeref:struct:Block::block_st
+block	.\block.h	/^	} block;$/;"	t	class:DBlock	typeref:struct:DBlock::block_st
+block_item	.\block.h	/^	} block_item;$/;"	t	class:DBlock	typeref:union:DBlock::block_item_st
+block_item_st	.\block.h	/^	typedef union block_item_st$/;"	u	class:DBlock
+block_size	.\block.h	/^	int			block_size;$/;"	m	class:DBlock
+block_size	.\block.h	/^	int		block_size;$/;"	m	class:Block
+block_st	.\block.h	/^	typedef struct block_st$/;"	s	class:Block
+block_st	.\block.h	/^	typedef struct block_st$/;"	s	class:DBlock
+changed_list	.\graph.h	/^	Block<node_id>		*changed_list;$/;"	m	class:Graph
+current	.\block.h	/^		Type					*current, *last;$/;"	m	struct:Block::block_st
+data	.\block.h	/^		Type					data[1];$/;"	m	struct:Block::block_st
+data	.\block.h	/^		block_item				data[1];$/;"	m	struct:DBlock::block_st
+error_function	.\block.h	/^	void	(*error_function)(char *);$/;"	m	class:Block
+error_function	.\block.h	/^	void	(*error_function)(char *);$/;"	m	class:DBlock
+error_function	.\graph.h	/^	void	(*error_function)(char *);	\/\/ this function is called if a error occurs,$/;"	m	class:Graph
+first	.\block.h	/^	block		*first;$/;"	m	class:DBlock
+first	.\block.h	/^	block	*first;$/;"	m	class:Block
+first	.\graph.h	/^		arc			*first;		\/\/ first outcoming arc$/;"	m	struct:Graph::node
+first_free	.\block.h	/^	block_item	*first_free;$/;"	m	class:DBlock
+flow	.\graph.h	/^	flowtype			flow;		\/\/ total flow$/;"	m	class:Graph
+get_arc_ends	.\graph.h	/^	inline void Graph<captype,tcaptype,flowtype>::get_arc_ends(arc* a, node_id& i, node_id& j)$/;"	f	class:Graph
+get_arc_num	.\graph.h	/^	int get_arc_num() { return (int)(arc_last - arcs); }$/;"	f	class:Graph
+get_first_arc	.\graph.h	/^	inline typename Graph<captype,tcaptype,flowtype>::arc* Graph<captype,tcaptype,flowtype>::get_first_arc()$/;"	f	class:Graph
+get_next_arc	.\graph.h	/^	inline typename Graph<captype,tcaptype,flowtype>::arc* Graph<captype,tcaptype,flowtype>::get_next_arc(arc* a) $/;"	f	class:Graph
+get_node_num	.\graph.h	/^	int get_node_num() { return node_num; }$/;"	f	class:Graph
+get_rcap	.\graph.h	/^	inline captype Graph<captype,tcaptype,flowtype>::get_rcap(arc* a)$/;"	f	class:Graph
+get_trcap	.\graph.h	/^	inline tcaptype Graph<captype,tcaptype,flowtype>::get_trcap(node_id i)$/;"	f	class:Graph
+head	.\graph.h	/^		node		*head;		\/\/ node the arc points to$/;"	m	struct:Graph::arc
+is_in_changed_list	.\graph.h	/^		int			is_in_changed_list : 1; \/\/ set by maxflow if $/;"	m	struct:Graph::node
+is_marked	.\graph.h	/^		int			is_marked : 1;	\/\/ set by mark_node()$/;"	m	struct:Graph::node
+is_sink	.\graph.h	/^		int			is_sink : 1;	\/\/ flag showing whether the node is in the source or in the sink tree (if parent!=NULL)$/;"	m	struct:Graph::node
+last	.\block.h	/^		Type					*current, *last;$/;"	m	struct:Block::block_st
+last	.\block.h	/^	block	*last;$/;"	m	class:Block
+mark_node	.\graph.h	/^	inline void Graph<captype,tcaptype,flowtype>::mark_node(node_id _i)$/;"	f	class:Graph
+maxflow	.\maxflow.cpp	/^	flowtype Graph<captype,tcaptype,flowtype>::maxflow(bool reuse_trees, Block<node_id>* _changed_list)$/;"	f	class:Graph
+maxflow_init	.\maxflow.cpp	/^	void Graph<captype,tcaptype,flowtype>::maxflow_init()$/;"	f	class:Graph
+maxflow_iteration	.\graph.h	/^	int					maxflow_iteration; \/\/ counter$/;"	m	class:Graph
+maxflow_reuse_trees_init	.\maxflow.cpp	/^	void Graph<captype,tcaptype,flowtype>::maxflow_reuse_trees_init()$/;"	f	class:Graph
+next	.\block.h	/^		struct block_st			*next;$/;"	m	struct:Block::block_st	typeref:struct:Block::block_st::block_st
+next	.\block.h	/^		struct block_st			*next;$/;"	m	struct:DBlock::block_st	typeref:struct:DBlock::block_st::block_st
+next	.\graph.h	/^		arc			*next;		\/\/ next arc with the same originating node$/;"	m	struct:Graph::arc
+next	.\graph.h	/^		node		*next;		\/\/ pointer to the next active node$/;"	m	struct:Graph::node
+next	.\graph.h	/^		nodeptr		*next;$/;"	m	struct:Graph::nodeptr
+next_active	.\maxflow.cpp	/^	inline typename Graph<captype,tcaptype,flowtype>::node* Graph<captype,tcaptype,flowtype>::next_active()$/;"	f	class:Graph
+next_free	.\block.h	/^		block_item_st	*next_free;$/;"	m	union:DBlock::block_item_st
+node	.\graph.h	/^	struct node$/;"	s	class:Graph
+node_id	.\graph.h	/^	typedef int node_id;$/;"	t	class:Graph
+node_last	.\graph.h	/^	node				*nodes, *node_last, *node_max; \/\/ node_last = nodes+node_num, node_max = nodes+node_num_max;$/;"	m	class:Graph
+node_max	.\graph.h	/^	node				*nodes, *node_last, *node_max; \/\/ node_last = nodes+node_num, node_max = nodes+node_num_max;$/;"	m	class:Graph
+node_num	.\graph.h	/^	int					node_num;$/;"	m	class:Graph
+nodeptr	.\graph.h	/^	struct nodeptr$/;"	s	class:Graph
+nodeptr_block	.\graph.h	/^	DBlock<nodeptr>		*nodeptr_block;$/;"	m	class:Graph
+nodes	.\graph.h	/^	node				*nodes, *node_last, *node_max; \/\/ node_last = nodes+node_num, node_max = nodes+node_num_max;$/;"	m	class:Graph
+orphan_first	.\graph.h	/^	nodeptr				*orphan_first, *orphan_last;		\/\/ list of pointers to orphans$/;"	m	class:Graph
+orphan_last	.\graph.h	/^	nodeptr				*orphan_first, *orphan_last;		\/\/ list of pointers to orphans$/;"	m	class:Graph
+parent	.\graph.h	/^		arc			*parent;	\/\/ node's parent$/;"	m	struct:Graph::node
+process_sink_orphan	.\maxflow.cpp	/^	void Graph<captype,tcaptype,flowtype>::process_sink_orphan(node *i)$/;"	f	class:Graph
+process_source_orphan	.\maxflow.cpp	/^	void Graph<captype,tcaptype,flowtype>::process_source_orphan(node *i)$/;"	f	class:Graph
+ptr	.\graph.h	/^		node    	*ptr;$/;"	m	struct:Graph::nodeptr
+queue_first	.\graph.h	/^	node				*queue_first[2], *queue_last[2];	\/\/ list of active nodes$/;"	m	class:Graph
+queue_last	.\graph.h	/^	node				*queue_first[2], *queue_last[2];	\/\/ list of active nodes$/;"	m	class:Graph
+r_cap	.\graph.h	/^		captype		r_cap;		\/\/ residual capacity$/;"	m	struct:Graph::arc
+reallocate_arcs	.\graph.cpp	/^	void Graph<captype,tcaptype,flowtype>::reallocate_arcs()$/;"	f	class:Graph
+reallocate_nodes	.\graph.cpp	/^	void Graph<captype,tcaptype,flowtype>::reallocate_nodes(int num)$/;"	f	class:Graph
+remove_from_changed_list	.\graph.h	/^	void remove_from_changed_list(node_id i) $/;"	f	class:Graph
+reset	.\graph.cpp	/^	void Graph<captype,tcaptype,flowtype>::reset()$/;"	f	class:Graph
+scan_current_block	.\block.h	/^	block	*scan_current_block;$/;"	m	class:Block
+scan_current_data	.\block.h	/^	Type	*scan_current_data;$/;"	m	class:Block
+set_active	.\maxflow.cpp	/^	inline void Graph<captype,tcaptype,flowtype>::set_active(node *i)$/;"	f	class:Graph
+set_orphan_front	.\maxflow.cpp	/^	inline void Graph<captype,tcaptype,flowtype>::set_orphan_front(node *i)$/;"	f	class:Graph
+set_orphan_rear	.\maxflow.cpp	/^	inline void Graph<captype,tcaptype,flowtype>::set_orphan_rear(node *i)$/;"	f	class:Graph
+set_rcap	.\graph.h	/^	inline void Graph<captype,tcaptype,flowtype>::set_rcap(arc* a, captype rcap)$/;"	f	class:Graph
+set_trcap	.\graph.h	/^	inline void Graph<captype,tcaptype,flowtype>::set_trcap(node_id i, tcaptype trcap)$/;"	f	class:Graph
+sister	.\graph.h	/^		arc			*sister;	\/\/ reverse arc$/;"	m	struct:Graph::arc
+t	.\block.h	/^		Type			t;$/;"	m	union:DBlock::block_item_st
+termtype	.\graph.h	/^	} termtype; \/\/ terminals $/;"	t	class:Graph	typeref:enum:Graph::__anon1
+test_consistency	.\maxflow.cpp	/^	void Graph<captype,tcaptype,flowtype>::test_consistency(node* current_node)$/;"	f	class:Graph
+tr_cap	.\graph.h	/^		tcaptype	tr_cap;		\/\/ if tr_cap > 0 then tr_cap is residual capacity of the arc SOURCE->node$/;"	m	struct:Graph::node
+what_segment	.\graph.h	/^	inline typename Graph<captype,tcaptype,flowtype>::termtype Graph<captype,tcaptype,flowtype>::what_segment(node_id i, termtype default_segm)$/;"	f	class:Graph
+~Block	.\block.h	/^	~Block() { while (first) { block *next = first -> next; delete[] ((char*)first); first = next; } }$/;"	f	class:Block
+~DBlock	.\block.h	/^	~DBlock() { while (first) { block *next = first -> next; delete[] ((char*)first); first = next; } }$/;"	f	class:DBlock
+~Graph	.\graph.cpp	/^	Graph<captype,tcaptype,flowtype>::~Graph()$/;"	f	class:Graph
