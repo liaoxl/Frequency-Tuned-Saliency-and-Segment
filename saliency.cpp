@@ -19,8 +19,9 @@ int main()
     //imgSal.segMs();
 
     imshow("Saliency", imgSal.imgSal);
-    imshow("Seg", imgSal.imgSeg);
+    normalize(imgSal.imgSal, imgSal.imgSal, 255, 0, NORM_MINMAX);
 	imwrite("moondark-sal.png", imgSal.imgSal);
+    imshow("Seg", imgSal.imgSeg);
 	imwrite("moondark-seg.png", imgSal.imgSeg);
     //imshow("Meanshift seg", imgSal.imgMs);
 
